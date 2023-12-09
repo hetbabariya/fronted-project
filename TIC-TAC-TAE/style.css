@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightblue;
+}
+
+.container{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.container h1{
+    color: brown;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 30px;
+}
+
+#game{
+    width: 50vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px 20px;
+}
+.box{
+    width: 14vw;
+    height: 21vh;
+    font-size: 70px;
+    color: brown;
+    border: none;
+    box-shadow: 0px 0px 6px brown;
+    border-radius: 3px;
+    background-color: cornflowerblue;
+}
+
+#reset{
+    padding: 8px 12px;
+    font-size: 18px;
+    background-color: brown;
+    border-radius: 3px;
+    border: none;
+    color: white;
+}
+
+#winDisplay{
+    color: blue;
+    font-size: 40px;
+}
+
+.hide{
+    display: none;
+}
+
+#newGame{
+    padding: 8px 12px;
+    font-size: 18px;
+    background-color: black;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#displaymsg{
+    height: 100vh;
+    justify-content: center ;
+    align-items: center;
+    display: none;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#draw{
+    font-size: 25px;
+    background-color: black;
+    padding: 5px;
+    width: 25%;
+    color: white;
+    text-align: center;
+    border-radius: 50px;
+    display: none;
+}
