@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone-paper-scissor</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Stone Paper Scissor</h1>
+        <div id="playGround">
+            <div id="player1">
+                <div class="player-name">
+                    <h2>player1</h2>
+                </div>
+                <div id="user_choice_img">
+                    <img src="./img/rock.png" alt="">
+                </div>
+                <div id="user_choice_txt">Rock</div>
+            </div>
+            <div id="ScoreBoard">
+                <h2>Score board</h2>
+                <div class="round">
+                    <h3>Round</h3>
+                    <p id="roundnum">0</p>
+                </div>
+                <div id="playerScore">
+                    <div class="player1score">
+                        <h3>Player1 Score</h3>
+                        <p id="scorer1" class="score">0</p>
+                    </div>
+                    <div class="player2score">
+                        <h3>Player2 Score</h3>
+                        <p id="scorer2" class="score">0</p>
+                    </div>
+                </div>
+                <div id="winnermsg">
+                    <h3>Results</h3>    
+                    <p id="msg">winner is Het</p>
+                </div>
+            </div>
+            <div id="player2">
+                <div class="player-name" >
+                    <h2>player2</h2>
+                </div>
+                <div id="user_choice_img">
+                    <img src="./img/rock.png" alt="">
+                </div>
+                <div id="user_choice_txt">Rock</div>              
+
+            </div>
+        </div>
+
+        <div id="userChoice">
+            <h3>Select any one</h3>
+            <div id="choices">
+                <div id="rock" class="choice">
+                    <img src="./img/rock.png" alt="" id="rock">
+                </div>
+                <div id="paper" class="choice">
+                    <img src="./img/paper.png" alt="" id="paper">
+                </div>
+                <div id="scissor" class="choice">
+                    <img src="./img/scissors.png" alt="" id="scissor">
+                </div>
+            </div>
+        </div>
+        
+        <div class="gamebtn">
+            <button id="ResetGame">Reset Game</button>
+            <button id="NewGame">New Game</button>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
