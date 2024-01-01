@@ -7,6 +7,7 @@
 .container{
     width: 100%;
     height: 100vh;
+    filter: blur(90px);
 }
 
 .container h1{
@@ -46,7 +47,7 @@
     /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 0.5em;
     color: #311b92;
     background-color: #e3c5ff;
 }
@@ -95,7 +96,7 @@
     font-size: 30px;
 }
 
-#player2{
+#computer{
     width: 30%;
     /* border: 1px solid red; */
     background-color: #e3c5ff;
@@ -108,12 +109,21 @@
     align-items: center;
     flex-direction: column;
     gap: 2em;
+    margin-top: 70px;
 }
 
-#userChoice h3{
-    font-size: 30px;
-    margin-top: 10px;
-    color : blue
+#StartBtn{
+    width: 90%;
+    margin: auto;
+    padding: 7px 25px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    color : white;
+    background-color: blueviolet;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 #choices{
@@ -123,15 +133,15 @@
 }
 
 #choices img{
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: 110px;
     object-fit: cover;
     border-radius: 50%;
-    margin-right: 25px;
+    margin-right: 35px;
     cursor: pointer;
 }
 
-#choices img:hover{
+.clicked img{
     outline: blueviolet solid 5px;
     outline-offset: 3px;
     transform: scale(1.1)  rotate(360deg);
@@ -139,7 +149,7 @@
     
 }
 
-#ResetGame , #NewGame{
+#ResetGame , #NewGame , #WinNewGame, #WinResetGame{
     padding: 9px 35px;
     font-size: 25px;
     color : white;
@@ -147,6 +157,7 @@
     border: none;
     outline: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .gamebtn{
@@ -155,7 +166,7 @@
 }
 
 
-#user_choice_img img{
+#user_choice_img img , #computer_img img{
     width: 150px;
     height: 150px;
     object-fit: cover;
@@ -166,8 +177,165 @@
     outline-offset: 5px;
 }
 
-#user_choice_txt{
+#user_choice_txt , #computer_txt{
     font-size: 50px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #0035ff;
+}
+
+#ResetGame:hover , #NewGame:hover , #WinResetGame:hover, #WinNewGame:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+
+
+/* model */
+
+#model-container{
+    width: 45%;
+    height: 400px;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1; 
+    left:calc(100% - 45% - 28%);
+    top: 120px;
+    border-radius: 10px;    
+    display: flex;
+    flex-direction: column;    
+    /* display: none; */
+}
+
+#model-header{
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    padding: 20px;
+    align-items: center;
+    color: white;
+    background-color: blueviolet;
+    border-top-right-radius: 9px;    
+    border-top-left-radius: 9px;    
+}
+
+#model-header p{
+    flex-grow: 2;
+    text-align: center;
+    font-size: 35px;
+}
+
+
+#model-content{
+    padding: 20px;
+    height: 280px;
+    background-color: #8E24AA;
+    color: white;
+}
+
+.userNameInp{
+    display: flex;
+    align-items: center;
+    margin-bottom : 30px;
+    margin-top: 30px;
+    margin-left: 40px;
+    /* border: 1px solid black; */
+    
+}
+
+.userNameInp label , .userPlayRound label{
+    font-size: 27px;
+    /* border: 1px solid black; */
+}
+
+.userPlayRound{
+    display: fl2x;
+    margin-left: 40px;
+    align-items: center;
+    margin-bottom : 50px;
+}
+
+.userPlayRound #roundPlay{
+    padding: 7px 5px;
+    text-align: center;
+    border-radius: 50px;
+    margin-left : 10px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+.userNameInp #userName{ 
+    padding: 7px 15px;
+    width: 250px;
+    text-align: center;
+    margin-left : 10px;
+    border-radius: 50px;
+    font-size: 23px;
+    border: none;
+    outline: none;
+}
+
+#userName:invalid , #roundPlay:invalid{
+    border: 2px solid red;
+}
+
+#userName:valid , #roundPlay:valid{
+    border: 2px solid green;
+}
+
+
+#footer div{
+    font-size: 18px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:40px;
+    color: #fff;
+    background-color: blueviolet;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+
+#playBtn{
+    cursor: pointer;
+    padding: 7px 33px;
+    font-size: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: blueviolet;
+    color: white;
+    border: 1px solid white;
+    margin: auto;
+    display: block;
+}
+
+
+/* winner */
+
+#winner-sec{
+    width: 100%;
+    border: 1px solid red;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    background-image: linear-gradient(pink , blue);
+    color: white;
+    display: none;
+}
+
+#WinNewGame, #WinResetGame{
+    border: 2px solid white;
+}
+
+#winner-sec h1{
+    font-size: 80px;
+}
+#winner-sec h2{
+    font-size: 40px;
+
 }

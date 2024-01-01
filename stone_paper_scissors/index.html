@@ -5,16 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stone-paper-scissor</title>
 
+    <link rel="stylesheet" href="./../font_awesome/font_awsome/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
+
+    <!-- main model -->
+    <div id="model-container">
+        <div id="model-header">
+            <p>Welcome to Stone Paper Scissor Game</p>
+        </div>
+        <div id="model-content">
+            <form method="post" autocomplete="off">
+                <div class="userNameInp">
+                    <label for="userName">Enter Your Name : </label>
+                    <input type="text" id="userName" required pattern="[A-Za-z0-9]+">
+                </div>
+                <div class="userPlayRound">
+                    <label for="roundPlay">How Many Round You Want to Play : </label>
+                    <input type="number" id="roundPlay" min="1" max="20" required>
+                </div>
+            </form>
+            <button id="playBtn">Play</button>
+        </div>
+        <div id="footer">
+            <div>
+                Copyright &nbsp;
+                <i class="fa-regular fa-copyright"></i>
+                &nbsp; 2024 By hetbabariya | All Rights are Reseved
+            </div>
+        </div>
+    </div>
+    <!-- winner section -->
+    <div id="winner-sec">
+        <h1>congratulations!</h1>
+        <h2 id="winnerPlayer">Winner is player</h2>
+        <button id="WinResetGame">Reset Game</button>
+        <button id="WinNewGame">New Game</button>
+    </div>
+    <!-- main page -->
     <div class="container">
         <h1>Stone Paper Scissor</h1>
         <div id="playGround">
             <div id="player1">
                 <div class="player-name">
-                    <h2>player1</h2>
+                    <h2 id="username">player1</h2>
                 </div>
                 <div id="user_choice_img">
                     <img src="./img/rock.png" alt="">
@@ -29,33 +65,33 @@
                 </div>
                 <div id="playerScore">
                     <div class="player1score">
-                        <h3>Player1 Score</h3>
+                        <h3 id="player1_name">Player1 Score</h3>
                         <p id="scorer1" class="score">0</p>
                     </div>
                     <div class="player2score">
-                        <h3>Player2 Score</h3>
+                        <h3 id="player2_name">Computer</h3>
                         <p id="scorer2" class="score">0</p>
                     </div>
                 </div>
                 <div id="winnermsg">
                     <h3>Results</h3>    
-                    <p id="msg">winner is Het</p>
+                    <p id="msg">------------</p>
                 </div>
+                <button id="StartBtn">Start</button>
             </div>
-            <div id="player2">
+            <div id="computer">
                 <div class="player-name" >
-                    <h2>player2</h2>
+                    <h2>computer</h2>
                 </div>
-                <div id="user_choice_img">
+                <div id="computer_img">
                     <img src="./img/rock.png" alt="">
                 </div>
-                <div id="user_choice_txt">Rock</div>              
+                <div id="computer_txt">Rock</div>              
 
             </div>
         </div>
 
         <div id="userChoice">
-            <h3>Select any one</h3>
             <div id="choices">
                 <div id="rock" class="choice">
                     <img src="./img/rock.png" alt="" id="rock">
